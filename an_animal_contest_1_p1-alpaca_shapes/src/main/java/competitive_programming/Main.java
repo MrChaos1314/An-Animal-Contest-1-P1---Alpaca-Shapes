@@ -5,9 +5,20 @@ public class Main {
         Main r = new Main();
         r.run();
     }
+    
+    
+    int S;
+    int R;
+    int[] inputToSplit = new int[2];
 
     public void run(){
-        System.out.println(whatIsBigger(0, 0));
+        String input = input();
+        String[] inputSplit = input.split(" ");
+        inputToSplit[0] = Integer.parseInt(inputSplit[0]);
+        inputToSplit[1] = Integer.parseInt(inputSplit[1]);
+        S = inputToSplit[0];
+        R = inputToSplit[1];
+        System.out.print(whatIsBigger(S, R));
     }
 
     String circle = "CIRCLE";
@@ -23,4 +34,7 @@ public class Main {
         return circle;
     }
 
+    private String input(){
+        return "6 2";
+    }
 }
