@@ -1,7 +1,12 @@
 package competitive_programming;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Main r = new Main();
         r.run();
     }
@@ -9,15 +14,12 @@ public class Main {
     
     int S;
     int R;
-    int[] inputToSplit = new int[2];
 
-    public void run(){
-        String input = input();
-        String[] inputSplit = input.split(" ");
-        inputToSplit[0] = Integer.parseInt(inputSplit[0]);
-        inputToSplit[1] = Integer.parseInt(inputSplit[1]);
-        S = inputToSplit[0];
-        R = inputToSplit[1];
+    public void run() throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        S = Integer.parseInt(st.nextToken());
+        R = Integer.parseInt(st.nextToken());
         System.out.print(whatIsBigger(S, R));
     }
 
