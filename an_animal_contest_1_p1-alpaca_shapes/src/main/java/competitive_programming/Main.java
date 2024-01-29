@@ -33,8 +33,4 @@ public class Main {
         }
         return circle;
     }
-
-    private String input(){
-        return "6 2";
-    }
 }
